@@ -240,7 +240,7 @@ class SaveImageCaptionBatch(BaseNode):
                     if extra_pnginfo is not None:
                         for x in extra_pnginfo:
                             metadata.add_text(x, json.dumps(extra_pnginfo[x]))
-                img.save(f"{save_path}_{batch_number}.png", pnginfo=metadata, compress_level=4)
+                img.save(f"{save_path}.png", pnginfo=metadata, compress_level=4)
 
             with open(f"{save_path}{extension}", "w", encoding="utf-8") as f:
                 f.write(caption)
